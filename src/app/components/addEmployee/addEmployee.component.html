@@ -1,0 +1,64 @@
+<!-- Sample template -->
+<div class="container">
+  <button mat-icon-button class="close-button" (click)="onCloseDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <h2 class="heading">Enter the Details</h2>
+  <form [formGroup]="employeeForm" class="form-container">
+    <!-- <mat-form-field class="form-field">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Id" formControlName="id" type="number" />
+      <mat-error
+        *ngIf="
+          employeeForm.get('id')?.invalid && employeeForm.get('id')?.touched
+        "
+        >Required Field.
+      </mat-error>
+    </mat-form-field> -->
+    <br />
+    <mat-form-field class="form-field">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name" />
+      <mat-error
+        *ngIf="
+          employeeForm.get('name')?.invalid && employeeForm.get('name')?.touched
+        "
+      >
+        Required Field.
+      </mat-error>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field class="form-field">
+      <mat-label>Select Department</mat-label>
+      <mat-select formControlName="department" placeholder="Select Department">
+        <mat-option *ngFor="let dept of department" [value]="dept">
+          {{ dept }}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="
+          employeeForm.get('department')?.invalid &&
+          employeeForm.get('department')?.touched
+        "
+        >Required Field.
+      </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="form-field">
+      <mat-label>Salary</mat-label>
+      <input matInput placeholder="Salary" formControlName="salary" />
+      <mat-error
+        *ngIf="
+          employeeForm.get('salary')?.invalid &&
+          employeeForm.get('salary')?.touched
+        "
+        >Required Field.
+      </mat-error>
+    </mat-form-field>
+    <div class="submit-button-container">
+      <button mat-button color="primary" (click)="onSubmit()">Submit</button>
+    </div>
+   
+  </form>
+</div>

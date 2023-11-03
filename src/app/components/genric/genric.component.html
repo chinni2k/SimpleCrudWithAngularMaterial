@@ -1,0 +1,18 @@
+<div>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Location</td>
+      <td>Email</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of customers">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.location }}</td>
+      <td>{{ item.email }}</td>
+    </tr>
+  </tbody>
+</div>

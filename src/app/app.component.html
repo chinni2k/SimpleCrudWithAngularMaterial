@@ -1,0 +1,16 @@
+<app-top-Nav></app-top-Nav>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Side Navigation Bar (Hidden on smaller screens) -->
+    <div class="col-md-2 d-none d-md-block">
+      <app-side-Nav></app-side-Nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="col-md-10 ml-auto">
+      <div class="d-flex justifys-center">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

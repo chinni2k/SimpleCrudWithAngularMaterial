@@ -1,0 +1,110 @@
+/* Your existing styles */
+
+.sidebar {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 60px; /* Initial width when collapsed */
+    height: 100%;
+    background-color: #f8f9fa;
+    z-index: 100;
+    transition: width 0.3s ease; /* Add transition to the width property */
+  }
+  
+  .sidebar.sidebar-open {
+    width: 200px; /* Expanded width */
+  }
+  
+  .sidebar-content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease; /* Add transition to the opacity property */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border: none;
+    z-index: 101;
+    cursor: pointer;
+    transition: left 0.3s ease; /* Add transition to the left property */
+  }
+  
+  /* Style for the mat-icon */
+  mat-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Add transition to the transform property */
+  }
+  
+  /* Style for the menu icon */
+  mat-icon.menu-icon {
+    color: #1783aa;
+  }
+  
+  /* Style for the close icon */
+  mat-icon.close-icon {
+    color: #ff4500;
+    transform: rotate(180deg);
+  }
+  
+  /* Show the links smoothly when sidebar opens */
+  .sidebar.sidebar-open .sidebar-content {
+    opacity: 1;
+  }
+  
+  /* Hide the links smoothly when sidebar closes */
+  .sidebar.sidebar-collapsed .sidebar-content {
+    opacity: 0;
+  }
+  
+  /* Animation for the toggle button */
+  .toggle-button.slide-in {
+    animation: slideInButton 0.3s ease;
+  }
+  
+  /* Animation for the toggle button */
+  .toggle-button.slide-out {
+    animation: slideOutButton 0.3s ease;
+  }
+  
+  @keyframes slideInButton {
+    0% {
+      left: -60px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  @keyframes slideOutButton {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -60px;
+    }
+  }
+  
+  /* Additional styles for the unique hover effect on the Home tab link */
+  
+  

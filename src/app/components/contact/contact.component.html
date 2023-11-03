@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    
+      <td>Id</td>
+      <td>Name</td>
+      <td>Department</td>
+      <td>Salary</td>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of dataSource">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.department }}</td>
+      <td>{{ emp.salary }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,33 @@
+
+
+table {
+  width: 100%;
+}
+.table-container {
+  margin-top: 0px;
+ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;/* Adjust the height as needed; this will center the table vertically on the screen */
+}
+
+
+#changePostion{
+  margin-left: 200px;
+  padding-left: 200px;
+}
+
+.container{
+margin-left: 140px;
+margin-top: 50px;
+padding-left: 50px;
+padding-right: 200px;
+}
+
+.swal2-input {
+  font-size: 14px; /* You can adjust the font size as needed */
+  padding: 8px 12px; /* You can adjust the padding as needed */
+  width: 200px; /* You can adjust the width as needed */
+}

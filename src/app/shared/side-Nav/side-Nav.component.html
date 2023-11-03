@@ -1,0 +1,21 @@
+<nav class="sidebar" [ngClass]="{ 'sidebar-open': isSidebarOpen, 'sidebar-collapsed': !isSidebarOpen }">
+  <!-- Toggle button -->
+  <button class="toggle-button" (click)="toggleSidebar()">
+    <mat-icon class="menu-icon" *ngIf="!isSidebarOpen">menu</mat-icon>
+    <mat-icon class="close-icon" *ngIf="isSidebarOpen">close</mat-icon>
+  </button>
+
+  <!-- Side navigation content -->
+  <div class="sidebar-content">
+    <ul class="nav flex-column">
+      <!-- Show links only when sidebar is open -->
+      <li class="nav-item" *ngIf="isSidebarOpen">
+        <a class="nav-link" routerLink="/home"> <i class="fa-solid fa-house"></i> &nbsp;Home</a>
+      </li>
+      <li class="nav-item" *ngIf="isSidebarOpen">
+        <a class="nav-link" routerLink="/hjsdg" ><i class="fa-solid fa-gear"></i>&nbsp;Settings</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
